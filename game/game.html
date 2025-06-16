@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino Wallet Game</title>
+    <link rel="stylesheet" href="dino.css">
+    <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@1.91.1/lib/index.iife.min.js"></script>
+
+   <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@1.91.1/lib/index.iife.min.js"></script>
+
+</head>
+<body>
+    <div id="login-screen">
+        <div class="glass-card">
+            <h1>Dino Wallet Game</h1>
+            <input type="text" id="player-name" placeholder="Enter your name">
+            <button id="connect-wallet">Connect Wallet</button>
+            <button id="start-game" disabled>Start Game</button>
+            <p id="wallet-status">Wallet not connected</p>
+        </div>
+    </div>
+
+    <div id="game-screen" class="hidden">
+        <div class="canvas-container">
+            <canvas id="board"></canvas>
+         <div class="scoreboard">
+            <h3>SCORE</h3>
+            <div class="score-item">
+                <span>Current:</span>
+                <span id="score" class="score-value">0</span>
+            </div>
+            <div class="score-item">
+                <span>High Score:</span>
+                <span id="high-score" class="score-value">0</span>
+            </div>
+         </div>
+     </div>
+    </div>
+
+    <div id="countdown" class="hidden">
+        <div id="countdown-number">3</div>
+    </div>
+
+    <div id="game-over-screen" class="hidden">
+        <h1>GAME OVER!</h1>
+        <img id="game-over-img" src="img/dino-dead.png" alt="Game Over">
+        <div class="glass-card">
+            <h2>🏆 FINAL SCORE</h2>
+            <div class="score-item">
+                <span>Score:</span>
+                <span id="final-score" class="score-value">0</span>
+            </div>
+            <div class="score-item">
+                <span>Level:</span>
+                <span id="level-reached" class="score-value">1</span>
+            </div>
+            <div class="score-item">
+                <span>High Score:</span>
+                <span id="final-high-score" class="score-value">0</span>
+            </div>
+            <div class="score-item">
+                <span>Distance:</span>
+                <span id="total-distance" class="score-value">0m</span>
+            </div>
+        </div>
+        <button id="reset-button">
+            <img src="img/reset.png" alt="Play Again">
+            <span>PLAY AGAIN</span>
+        </button>
+    </div>
+
+    <div id="portrait-prompt" class="hidden">
+        Please rotate your device to landscape mode to play the game.
+    </div>
+
+    <script src="dino.js"></script>
+<script>//(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'94fb57a90b1d837d',t:'MTc0OTkxOTk5MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>--!></body>
+</html>
